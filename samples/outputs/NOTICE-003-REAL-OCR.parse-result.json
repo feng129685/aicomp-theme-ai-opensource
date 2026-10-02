@@ -1,0 +1,177 @@
+{
+  "parse_result_id": "parse-notice-003-real-ocr",
+  "document_id": "doc-notice-003-real-ocr",
+  "status": "成功",
+  "fields": [
+    {
+      "field_id": "field-notice-003-real-ocr-title",
+      "field_name": "title",
+      "value": "程序设计竞赛校内选拔通知",
+      "value_type": "string",
+      "confidence": 0.99,
+      "source_quote": "程序设计竞赛校内选拔通知",
+      "location": "第1页区域(50,50,600,100)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-audience",
+      "field_name": "audience",
+      "value": "全校在籍本科生",
+      "value_type": "string",
+      "confidence": 0.96,
+      "source_quote": "面向全校在籍本科生。报名截止时间为2026年10月18日18:00，比赛地点为计算中心201室。",
+      "location": "第1页区域(50,130,1100,190)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-location",
+      "field_name": "location",
+      "value": "计算中心201室",
+      "value_type": "string",
+      "confidence": 0.96,
+      "source_quote": "面向全校在籍本科生。报名截止时间为2026年10月18日18:00，比赛地点为计算中心201室。",
+      "location": "第1页区域(50,130,1100,190)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-conditions",
+      "field_name": "conditions",
+      "value": "以2至3人组队",
+      "value_type": "string",
+      "confidence": 0.95,
+      "source_quote": "报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以2至3人组队。",
+      "location": "第1页区域(50,210,1100,270)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-submit-method",
+      "field_name": "submit_method",
+      "value": "竞赛系统在线提交",
+      "value_type": "string",
+      "confidence": 0.95,
+      "source_quote": "报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以2至3人组队。",
+      "location": "第1页区域(50,210,1100,270)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-materials",
+      "field_name": "materials",
+      "value": [
+        "队伍信息表",
+        "提交方式为竞赛系统在线提交"
+      ],
+      "value_type": "string_array",
+      "confidence": 0.95,
+      "source_quote": "报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以2至3人组队。",
+      "location": "第1页区域(50,210,1100,270)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-deadline",
+      "field_name": "deadline",
+      "value": "2026-10-18T18:00:00+08:00",
+      "value_type": "datetime",
+      "confidence": 0.96,
+      "source_quote": "面向全校在籍本科生。报名截止时间为2026年10月18日18:00，比赛地点为计算中心201室。",
+      "location": "第1页区域(50,130,1100,190)",
+      "page": 1,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-team-size",
+      "field_name": "team_size",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-defense-time",
+      "field_name": "defense_time",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-003-real-ocr-supplement",
+      "field_name": "supplement",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    }
+  ],
+  "course_assessment": null,
+  "notice": {
+    "matter_id": "matter-programming-contest-003",
+    "version": "v1",
+    "based_on_version": null,
+    "title": "程序设计竞赛校内选拔通知",
+    "audience": "全校在籍本科生",
+    "location": "计算中心201室",
+    "conditions": "以2至3人组队",
+    "submit_method": "竞赛系统在线提交",
+    "materials": [
+      "队伍信息表",
+      "提交方式为竞赛系统在线提交"
+    ],
+    "deadline": "2026-10-18T18:00:00+08:00",
+    "extensions": {
+      "team_size": null,
+      "defense_time": null,
+      "supplement": null
+    },
+    "evidence_field_ids": {
+      "title": "field-notice-003-real-ocr-title",
+      "audience": "field-notice-003-real-ocr-audience",
+      "location": "field-notice-003-real-ocr-location",
+      "conditions": "field-notice-003-real-ocr-conditions",
+      "submit_method": "field-notice-003-real-ocr-submit-method",
+      "materials": "field-notice-003-real-ocr-materials",
+      "deadline": "field-notice-003-real-ocr-deadline",
+      "team_size": "field-notice-003-real-ocr-team-size",
+      "defense_time": "field-notice-003-real-ocr-defense-time",
+      "supplement": "field-notice-003-real-ocr-supplement"
+    }
+  },
+  "warnings": [
+    "输入来自真实OCR引擎 示例引擎名称 0.0-example；本次解析结果不等同于准确率统计"
+  ],
+  "errors": []
+}

@@ -1,0 +1,156 @@
+{
+  "proposal_id": "proposal-notice-002-v1-to-v2",
+  "matter_id": "matter-lab-safety-002",
+  "old_document_id": "doc-notice-002-v1",
+  "new_document_id": "doc-notice-002-v2",
+  "field_diffs": [
+    {
+      "diff_id": "diff-notice-002-title",
+      "field_name": "title",
+      "type": "未变化",
+      "old": "实验室安全培训通知",
+      "new": "实验室安全培训通知",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-title",
+        "field-notice-002-v2-title"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-002-audience",
+      "field_name": "audience",
+      "type": "未变化",
+      "old": "2026级软件工程专业本科生",
+      "new": "2026级软件工程专业本科生",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-audience",
+        "field-notice-002-v2-audience"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-002-deadline",
+      "field_name": "deadline",
+      "type": "未变化",
+      "old": "2026-10-14T18:00:00+08:00",
+      "new": "2026-10-14T18:00:00+08:00",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-deadline",
+        "field-notice-002-v2-deadline"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-002-location",
+      "field_name": "location",
+      "type": "未变化",
+      "old": "信息楼301室",
+      "new": "信息楼301室",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-location",
+        "field-notice-002-v2-location"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-002-materials",
+      "field_name": "materials",
+      "type": "未变化",
+      "old": [
+        "校园卡",
+        "签字笔"
+      ],
+      "new": [
+        "校园卡",
+        "签字笔"
+      ],
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-materials",
+        "field-notice-002-v2-materials"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-002-conditions",
+      "field_name": "conditions",
+      "type": "未变化",
+      "old": "完成线上安全课程",
+      "new": "完成线上安全课程",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-conditions",
+        "field-notice-002-v2-conditions"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-002-submit-method",
+      "field_name": "submit_method",
+      "type": "未变化",
+      "old": "通过学院事务系统提交报名信息",
+      "new": "通过学院事务系统提交报名信息",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-002-v1-submit-method",
+        "field-notice-002-v2-submit-method"
+      ],
+      "affected_task_ids": []
+    }
+  ],
+  "affected_task_ids": [],
+  "old_value": {
+    "title": "实验室安全培训通知",
+    "audience": "2026级软件工程专业本科生",
+    "deadline": "2026-10-14T18:00:00+08:00",
+    "location": "信息楼301室",
+    "materials": [
+      "校园卡",
+      "签字笔"
+    ],
+    "conditions": "完成线上安全课程",
+    "submit_method": "通过学院事务系统提交报名信息"
+  },
+  "suggested_value": {
+    "title": "实验室安全培训通知",
+    "audience": "2026级软件工程专业本科生",
+    "deadline": "2026-10-14T18:00:00+08:00",
+    "location": "信息楼301室",
+    "materials": [
+      "校园卡",
+      "签字笔"
+    ],
+    "conditions": "完成线上安全课程",
+    "submit_method": "通过学院事务系统提交报名信息"
+  },
+  "evidence": [
+    "field-notice-002-v1-title",
+    "field-notice-002-v2-title",
+    "field-notice-002-v1-audience",
+    "field-notice-002-v2-audience",
+    "field-notice-002-v1-deadline",
+    "field-notice-002-v2-deadline",
+    "field-notice-002-v1-location",
+    "field-notice-002-v2-location",
+    "field-notice-002-v1-materials",
+    "field-notice-002-v2-materials",
+    "field-notice-002-v1-conditions",
+    "field-notice-002-v2-conditions",
+    "field-notice-002-v1-submit-method",
+    "field-notice-002-v2-submit-method"
+  ],
+  "confirmation_status": "待确认",
+  "confirmed_at": null,
+  "confirmed_by": null
+}

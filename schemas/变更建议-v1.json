@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/zhixiaoyuan/change-proposal-v1.schema.json",
+  "title": "智校园 ChangeProposal v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "proposal_id", "matter_id", "old_document_id", "new_document_id", "field_diffs",
+    "affected_task_ids", "old_value", "suggested_value", "evidence", "confirmation_status",
+    "confirmed_at", "confirmed_by"
+  ],
+  "properties": {
+    "proposal_id": {"type": "string", "minLength": 1},
+    "matter_id": {"type": "string", "minLength": 1},
+    "old_document_id": {"type": "string", "minLength": 1},
+    "new_document_id": {"type": "string", "minLength": 1},
+    "field_diffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["diff_id", "field_name", "type", "old", "new", "needs_confirmation", "reason", "evidence_field_ids", "affected_task_ids"],
+        "properties": {
+          "diff_id": {"type": "string"},
+          "field_name": {"type": "string"},
+          "type": {"enum": ["新增", "修改", "撤销", "未变化", "冲突待确认"]},
+          "old": {},
+          "new": {},
+          "needs_confirmation": {"type": "boolean"},
+          "reason": {"type": ["string", "null"]},
+          "evidence_field_ids": {"type": "array", "items": {"type": "string"}},
+          "affected_task_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "affected_task_ids": {"type": "array", "items": {"type": "string"}},
+    "old_value": {"type": "object"},
+    "suggested_value": {"type": "object"},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "confirmation_status": {"enum": ["待确认", "已接受", "已拒绝", "冲突待选择"]},
+    "confirmed_at": {"type": ["string", "null"], "format": "date-time"},
+    "confirmed_by": {"type": ["string", "null"]}
+  }
+}

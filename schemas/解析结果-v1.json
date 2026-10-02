@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/zhixiaoyuan/parse-result-v1.schema.json",
+  "title": "智校园 ParseResult v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "parse_result_id",
+    "document_id",
+    "status",
+    "fields",
+    "course_assessment",
+    "notice",
+    "warnings",
+    "errors"
+  ],
+  "properties": {
+    "parse_result_id": {"type": "string", "minLength": 1},
+    "document_id": {"type": "string", "minLength": 1},
+    "status": {"$ref": "#/$defs/parseStatus"},
+    "fields": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/evidenceField"}
+    },
+    "course_assessment": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/courseAssessment"}
+      ]
+    },
+    "notice": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/notice"}
+      ]
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "errors": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "course_assessment": {"$ref": "#/$defs/courseAssessment"},
+            "notice": {"type": "null"}
+          }
+        },
+        {
+          "properties": {
+            "course_assessment": {"type": "null"},
+            "notice": {"$ref": "#/$defs/notice"}
+          }
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "parseStatus": {
+      "enum": ["处理中", "成功", "部分成功", "失败", "需人工确认"]
+    },
+    "evidenceKind": {
+      "enum": ["原文", "推断/计算", "无法确认"]
+    },
+    "evidenceField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_id",
+        "field_name",
+        "value",
+        "value_type",
+        "confidence",
+        "source_quote",
+        "location",
+        "page",
+        "needs_confirmation",
+        "conflict",
+        "evidence_kind"
+      ],
+      "properties": {
+        "field_id": {"type": "string", "minLength": 1},
+        "field_name": {"type": "string", "minLength": 1},
+        "value": {},
+        "value_type": {
+          "enum": ["string", "number", "boolean", "datetime", "string_array", "formula", "null"]
+        },
+        "confidence": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0, "maximum": 1}
+          ]
+        },
+        "source_quote": {"type": ["string", "null"]},
+        "location": {"type": ["string", "null"]},
+        "page": {"type": ["integer", "null"], "minimum": 1},
+        "needs_confirmation": {"type": "boolean"},
+        "conflict": {"type": ["string", "null"]},
+        "evidence_kind": {"$ref": "#/$defs/evidenceKind"}
+      }
+    },
+    "leafAssessmentItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["item_id", "name", "weight", "children", "evidence_field_ids"],
+      "properties": {
+        "item_id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "weight": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "children": {"type": "array", "maxItems": 0},
+        "evidence_field_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "assessmentItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["item_id", "name", "weight", "children", "evidence_field_ids"],
+      "properties": {
+        "item_id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "weight": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "children": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/leafAssessmentItem"}
+        },
+        "evidence_field_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "courseAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["course_id", "formula_type", "items", "calculable", "calculation_block_reason"],
+      "properties": {
+        "course_id": {"type": "string", "minLength": 1},
+        "formula_type": {"const": "weighted_sum"},
+        "items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/assessmentItem"}},
+        "calculable": {"type": "boolean"},
+        "calculation_block_reason": {"type": ["string", "null"]}
+      }
+    },
+    "noticeExtensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["team_size", "defense_time", "supplement"],
+      "properties": {
+        "team_size": {},
+        "defense_time": {},
+        "supplement": {}
+      }
+    },
+    "noticeEvidenceMap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title", "audience", "deadline", "location", "materials", "conditions", "submit_method",
+        "team_size", "defense_time", "supplement"
+      ],
+      "properties": {
+        "title": {"type": "string"},
+        "audience": {"type": "string"},
+        "deadline": {"type": "string"},
+        "location": {"type": "string"},
+        "materials": {"type": "string"},
+        "conditions": {"type": "string"},
+        "submit_method": {"type": "string"},
+        "team_size": {"type": "string"},
+        "defense_time": {"type": "string"},
+        "supplement": {"type": "string"}
+      }
+    },
+    "notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "matter_id", "version", "based_on_version", "title", "audience", "deadline", "location",
+        "materials", "conditions", "submit_method", "extensions", "evidence_field_ids"
+      ],
+      "properties": {
+        "matter_id": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "based_on_version": {"type": ["string", "null"]},
+        "title": {"type": ["string", "null"]},
+        "audience": {"type": ["string", "null"]},
+        "deadline": {"type": ["string", "null"], "format": "date-time"},
+        "location": {"type": ["string", "null"]},
+        "materials": {"type": ["array", "null"], "items": {"type": "string"}},
+        "conditions": {"type": ["string", "null"]},
+        "submit_method": {"type": ["string", "null"]},
+        "extensions": {"$ref": "#/$defs/noticeExtensions"},
+        "evidence_field_ids": {"$ref": "#/$defs/noticeEvidenceMap"}
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "parse_result_id": "parse-course-001",
+  "document_id": "doc-course-001",
+  "status": "成功",
+  "fields": [
+    {
+      "field_id": "field-course-001-course-title",
+      "field_name": "course_title",
+      "value": "软件工程",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "# 《软件工程》课程考核说明（虚构样例）",
+      "location": "第1行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-001-1-weight",
+      "field_name": "weight",
+      "value": 0.4,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "- 平时成绩占总评成绩的 40%；",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-001-2-weight",
+      "field_name": "weight",
+      "value": 0.6,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "- 期末考试成绩占总评成绩的 60%。",
+      "location": "第6行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    }
+  ],
+  "course_assessment": {
+    "course_id": "course-course-001-simple",
+    "formula_type": "weighted_sum",
+    "items": [
+      {
+        "item_id": "item-1",
+        "name": "平时成绩",
+        "weight": 0.4,
+        "children": [],
+        "evidence_field_ids": [
+          "field-course-001-1-weight"
+        ]
+      },
+      {
+        "item_id": "item-2",
+        "name": "期末考试成绩",
+        "weight": 0.6,
+        "children": [],
+        "evidence_field_ids": [
+          "field-course-001-2-weight"
+        ]
+      }
+    ],
+    "calculable": true,
+    "calculation_block_reason": null
+  },
+  "notice": null,
+  "warnings": [],
+  "errors": []
+}

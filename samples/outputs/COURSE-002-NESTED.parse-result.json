@@ -1,0 +1,120 @@
+{
+  "parse_result_id": "parse-course-002",
+  "document_id": "doc-course-002",
+  "status": "成功",
+  "fields": [
+    {
+      "field_id": "field-course-002-course-title",
+      "field_name": "course_title",
+      "value": "数据库系统",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "# 《数据库系统》课程考核说明（虚构样例）",
+      "location": "第1行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-002-process-weight",
+      "field_name": "weight",
+      "value": 0.5,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "过程性考核占总评成绩的 50%，其中作业占过程性考核的 40%，实验占过程性考核的 60%。期末考试占总评成绩的 50%。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-002-homework-weight",
+      "field_name": "weight",
+      "value": 0.4,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "过程性考核占总评成绩的 50%，其中作业占过程性考核的 40%，实验占过程性考核的 60%。期末考试占总评成绩的 50%。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-002-lab-weight",
+      "field_name": "weight",
+      "value": 0.6,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "过程性考核占总评成绩的 50%，其中作业占过程性考核的 40%，实验占过程性考核的 60%。期末考试占总评成绩的 50%。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-002-final-weight",
+      "field_name": "weight",
+      "value": 0.5,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "过程性考核占总评成绩的 50%，其中作业占过程性考核的 40%，实验占过程性考核的 60%。期末考试占总评成绩的 50%。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    }
+  ],
+  "course_assessment": {
+    "course_id": "course-course-002-nested",
+    "formula_type": "weighted_sum",
+    "items": [
+      {
+        "item_id": "item-process",
+        "name": "过程性考核",
+        "weight": 0.5,
+        "children": [
+          {
+            "item_id": "item-homework",
+            "name": "作业",
+            "weight": 0.4,
+            "children": [],
+            "evidence_field_ids": [
+              "field-course-002-homework-weight"
+            ]
+          },
+          {
+            "item_id": "item-lab",
+            "name": "实验",
+            "weight": 0.6,
+            "children": [],
+            "evidence_field_ids": [
+              "field-course-002-lab-weight"
+            ]
+          }
+        ],
+        "evidence_field_ids": [
+          "field-course-002-process-weight"
+        ]
+      },
+      {
+        "item_id": "item-final",
+        "name": "期末考试成绩",
+        "weight": 0.5,
+        "children": [],
+        "evidence_field_ids": [
+          "field-course-002-final-weight"
+        ]
+      }
+    ],
+    "calculable": true,
+    "calculation_block_reason": null
+  },
+  "notice": null,
+  "warnings": [],
+  "errors": []
+}

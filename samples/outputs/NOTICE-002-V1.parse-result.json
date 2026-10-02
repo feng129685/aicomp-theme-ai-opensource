@@ -1,0 +1,175 @@
+{
+  "parse_result_id": "parse-notice-002-v1",
+  "document_id": "doc-notice-002-v1",
+  "status": "成功",
+  "fields": [
+    {
+      "field_id": "field-notice-002-v1-title",
+      "field_name": "title",
+      "value": "实验室安全培训通知",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "# 实验室安全培训通知（虚构样例）",
+      "location": "第1行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-audience",
+      "field_name": "audience",
+      "value": "2026级软件工程专业本科生",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "请 2026 级软件工程专业本科生参加实验室安全培训。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-location",
+      "field_name": "location",
+      "value": "信息楼301室",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "培训时间为 2026 年 10 月 15 日 14:00，地点为信息楼 301 室。请携带校园卡和签字笔，并于 2026 年 10 月 14 日 18:00 前通过学院事务系统提交报名信息。参加人员须完成线上安全课程。",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-conditions",
+      "field_name": "conditions",
+      "value": "完成线上安全课程",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "培训时间为 2026 年 10 月 15 日 14:00，地点为信息楼 301 室。请携带校园卡和签字笔，并于 2026 年 10 月 14 日 18:00 前通过学院事务系统提交报名信息。参加人员须完成线上安全课程。",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-submit-method",
+      "field_name": "submit_method",
+      "value": "通过学院事务系统提交报名信息",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "培训时间为 2026 年 10 月 15 日 14:00，地点为信息楼 301 室。请携带校园卡和签字笔，并于 2026 年 10 月 14 日 18:00 前通过学院事务系统提交报名信息。参加人员须完成线上安全课程。",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-materials",
+      "field_name": "materials",
+      "value": [
+        "校园卡",
+        "签字笔"
+      ],
+      "value_type": "string_array",
+      "confidence": null,
+      "source_quote": "培训时间为 2026 年 10 月 15 日 14:00，地点为信息楼 301 室。请携带校园卡和签字笔，并于 2026 年 10 月 14 日 18:00 前通过学院事务系统提交报名信息。参加人员须完成线上安全课程。",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-deadline",
+      "field_name": "deadline",
+      "value": "2026-10-14T18:00:00+08:00",
+      "value_type": "datetime",
+      "confidence": null,
+      "source_quote": "培训时间为 2026 年 10 月 15 日 14:00，地点为信息楼 301 室。请携带校园卡和签字笔，并于 2026 年 10 月 14 日 18:00 前通过学院事务系统提交报名信息。参加人员须完成线上安全课程。",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-002-v1-team-size",
+      "field_name": "team_size",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-002-v1-defense-time",
+      "field_name": "defense_time",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-002-v1-supplement",
+      "field_name": "supplement",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    }
+  ],
+  "course_assessment": null,
+  "notice": {
+    "matter_id": "matter-lab-safety-002",
+    "version": "v1",
+    "based_on_version": null,
+    "title": "实验室安全培训通知",
+    "audience": "2026级软件工程专业本科生",
+    "location": "信息楼301室",
+    "conditions": "完成线上安全课程",
+    "submit_method": "通过学院事务系统提交报名信息",
+    "materials": [
+      "校园卡",
+      "签字笔"
+    ],
+    "deadline": "2026-10-14T18:00:00+08:00",
+    "extensions": {
+      "team_size": null,
+      "defense_time": null,
+      "supplement": null
+    },
+    "evidence_field_ids": {
+      "title": "field-notice-002-v1-title",
+      "audience": "field-notice-002-v1-audience",
+      "location": "field-notice-002-v1-location",
+      "conditions": "field-notice-002-v1-conditions",
+      "submit_method": "field-notice-002-v1-submit-method",
+      "materials": "field-notice-002-v1-materials",
+      "deadline": "field-notice-002-v1-deadline",
+      "team_size": "field-notice-002-v1-team-size",
+      "defense_time": "field-notice-002-v1-defense-time",
+      "supplement": "field-notice-002-v1-supplement"
+    }
+  },
+  "warnings": [],
+  "errors": []
+}

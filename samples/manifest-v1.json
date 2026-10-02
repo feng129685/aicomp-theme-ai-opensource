@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "public_schema_changed": false,
+  "fixture_ocr_is_accuracy_measurement": false,
+  "parse_result_samples": [
+    "COURSE-001-SIMPLE", "COURSE-002-NESTED", "COURSE-003-INCOMPLETE",
+    "NOTICE-002-V1", "NOTICE-002-V2", "NOTICE-003-V1", "NOTICE-003-V2",
+    "OCR-001-CLEAR", "NOTICE-003-REAL-OCR"
+  ],
+  "change_proposal_samples": ["NOTICE-002", "NOTICE-003"],
+  "real_ocr_note": "NOTICE-003-real-ocr.json 是接入格式示例，不是实测结果"
+}

@@ -1,0 +1,144 @@
+{
+  "proposal_id": "proposal-notice-003-v1-to-v2",
+  "matter_id": "matter-programming-contest-003",
+  "old_document_id": "doc-notice-003-v1",
+  "new_document_id": "doc-notice-003-v2",
+  "field_diffs": [
+    {
+      "diff_id": "diff-notice-003-title",
+      "field_name": "title",
+      "type": "未变化",
+      "old": "程序设计竞赛校内选拔通知",
+      "new": "程序设计竞赛校内选拔通知",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-003-v1-title",
+        "field-notice-003-v2-title"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-003-audience",
+      "field_name": "audience",
+      "type": "未变化",
+      "old": "全校在籍本科生",
+      "new": "全校在籍本科生",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-003-v1-audience",
+        "field-notice-003-v2-audience"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-003-deadline",
+      "field_name": "deadline",
+      "type": "冲突待确认",
+      "old": "2026-10-18T18:00:00+08:00",
+      "new": null,
+      "needs_confirmation": true,
+      "reason": "候选截止时间冲突：2026-10-20T18:00:00+08:00；2026-10-21T18:00:00+08:00",
+      "evidence_field_ids": [
+        "field-notice-003-v1-deadline",
+        "field-notice-003-v2-deadline",
+        "field-notice-003-v2-deadline"
+      ],
+      "affected_task_ids": [
+        "task-notice-003-registration"
+      ]
+    },
+    {
+      "diff_id": "diff-notice-003-location",
+      "field_name": "location",
+      "type": "未变化",
+      "old": "计算中心201室",
+      "new": "计算中心201室",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-003-v1-location",
+        "field-notice-003-v2-location"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-003-materials",
+      "field_name": "materials",
+      "type": "未变化",
+      "old": [
+        "队伍信息表",
+        "提交方式为竞赛系统在线提交"
+      ],
+      "new": [
+        "队伍信息表",
+        "提交方式为竞赛系统在线提交"
+      ],
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-003-v1-materials",
+        "field-notice-003-v2-materials"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-003-conditions",
+      "field_name": "conditions",
+      "type": "未变化",
+      "old": "以 2 至 3 人组队",
+      "new": "以 2 至 3 人组队",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-003-v1-conditions",
+        "field-notice-003-v2-conditions"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-003-submit-method",
+      "field_name": "submit_method",
+      "type": "未变化",
+      "old": "竞赛系统在线提交",
+      "new": "竞赛系统在线提交",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-003-v1-submit-method",
+        "field-notice-003-v2-submit-method"
+      ],
+      "affected_task_ids": []
+    }
+  ],
+  "affected_task_ids": [
+    "task-notice-003-registration"
+  ],
+  "old_value": {
+    "deadline": "2026-10-18T18:00:00+08:00"
+  },
+  "suggested_value": {
+    "deadline": null
+  },
+  "evidence": [
+    "field-notice-003-v1-title",
+    "field-notice-003-v2-title",
+    "field-notice-003-v1-audience",
+    "field-notice-003-v2-audience",
+    "field-notice-003-v1-deadline",
+    "field-notice-003-v2-deadline",
+    "field-notice-003-v2-deadline",
+    "field-notice-003-v1-location",
+    "field-notice-003-v2-location",
+    "field-notice-003-v1-materials",
+    "field-notice-003-v2-materials",
+    "field-notice-003-v1-conditions",
+    "field-notice-003-v2-conditions",
+    "field-notice-003-v1-submit-method",
+    "field-notice-003-v2-submit-method"
+  ],
+  "confirmation_status": "冲突待选择",
+  "confirmed_at": null,
+  "confirmed_by": null
+}

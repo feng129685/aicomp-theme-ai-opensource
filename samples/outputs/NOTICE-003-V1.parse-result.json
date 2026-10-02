@@ -1,0 +1,175 @@
+{
+  "parse_result_id": "parse-notice-003-v1",
+  "document_id": "doc-notice-003-v1",
+  "status": "成功",
+  "fields": [
+    {
+      "field_id": "field-notice-003-v1-title",
+      "field_name": "title",
+      "value": "程序设计竞赛校内选拔通知",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "# 程序设计竞赛校内选拔通知（虚构样例）",
+      "location": "第1行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-audience",
+      "field_name": "audience",
+      "value": "全校在籍本科生",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向全校在籍本科生。报名截止时间为 2026 年 10 月 18 日 18:00，比赛地点为计算中心 201 室。报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以 2 至 3 人组队。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-location",
+      "field_name": "location",
+      "value": "计算中心201室",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向全校在籍本科生。报名截止时间为 2026 年 10 月 18 日 18:00，比赛地点为计算中心 201 室。报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以 2 至 3 人组队。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-conditions",
+      "field_name": "conditions",
+      "value": "以 2 至 3 人组队",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向全校在籍本科生。报名截止时间为 2026 年 10 月 18 日 18:00，比赛地点为计算中心 201 室。报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以 2 至 3 人组队。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-submit-method",
+      "field_name": "submit_method",
+      "value": "竞赛系统在线提交",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向全校在籍本科生。报名截止时间为 2026 年 10 月 18 日 18:00，比赛地点为计算中心 201 室。报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以 2 至 3 人组队。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-materials",
+      "field_name": "materials",
+      "value": [
+        "队伍信息表",
+        "提交方式为竞赛系统在线提交"
+      ],
+      "value_type": "string_array",
+      "confidence": null,
+      "source_quote": "面向全校在籍本科生。报名截止时间为 2026 年 10 月 18 日 18:00，比赛地点为计算中心 201 室。报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以 2 至 3 人组队。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-deadline",
+      "field_name": "deadline",
+      "value": "2026-10-18T18:00:00+08:00",
+      "value_type": "datetime",
+      "confidence": null,
+      "source_quote": "面向全校在籍本科生。报名截止时间为 2026 年 10 月 18 日 18:00，比赛地点为计算中心 201 室。报名材料为队伍信息表，提交方式为竞赛系统在线提交。参赛者须以 2 至 3 人组队。",
+      "location": "第3行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-003-v1-team-size",
+      "field_name": "team_size",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-003-v1-defense-time",
+      "field_name": "defense_time",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-003-v1-supplement",
+      "field_name": "supplement",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    }
+  ],
+  "course_assessment": null,
+  "notice": {
+    "matter_id": "matter-programming-contest-003",
+    "version": "v1",
+    "based_on_version": null,
+    "title": "程序设计竞赛校内选拔通知",
+    "audience": "全校在籍本科生",
+    "location": "计算中心201室",
+    "conditions": "以 2 至 3 人组队",
+    "submit_method": "竞赛系统在线提交",
+    "materials": [
+      "队伍信息表",
+      "提交方式为竞赛系统在线提交"
+    ],
+    "deadline": "2026-10-18T18:00:00+08:00",
+    "extensions": {
+      "team_size": null,
+      "defense_time": null,
+      "supplement": null
+    },
+    "evidence_field_ids": {
+      "title": "field-notice-003-v1-title",
+      "audience": "field-notice-003-v1-audience",
+      "location": "field-notice-003-v1-location",
+      "conditions": "field-notice-003-v1-conditions",
+      "submit_method": "field-notice-003-v1-submit-method",
+      "materials": "field-notice-003-v1-materials",
+      "deadline": "field-notice-003-v1-deadline",
+      "team_size": "field-notice-003-v1-team-size",
+      "defense_time": "field-notice-003-v1-defense-time",
+      "supplement": "field-notice-003-v1-supplement"
+    }
+  },
+  "warnings": [],
+  "errors": []
+}
