@@ -19,3 +19,6 @@ coverage.xml
 htmlcov/
 Thumbs.db
 Desktop.ini
+*.log
+*.apk
+*.aab

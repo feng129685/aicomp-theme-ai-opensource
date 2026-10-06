@@ -1,0 +1,14 @@
+{
+  "engine": "EasyOCR",
+  "engine_version": "1.7.2",
+  "languages": [
+    "ch_sim",
+    "en"
+  ],
+  "gpu": false,
+  "input": "samples/ocr/OCR-001-CLEAR.png",
+  "status": "失败",
+  "accuracy": null,
+  "error_type": "OcrEngineError",
+  "error": "EasyOCR 识别失败，第1页: 'NoneType' object has no attribute 'shape'"
+}

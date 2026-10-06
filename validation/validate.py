@@ -14,7 +14,7 @@ def main() -> None:
     output_dir = ROOT / "samples" / "outputs"
     parse_files = sorted(output_dir.glob("*.parse-result.json"))
     proposal_files = sorted(output_dir.glob("*.change-proposal.json"))
-    if len(parse_files) != 9 or len(proposal_files) != 2:
+    if len(parse_files) != 11 or len(proposal_files) != 3:
         raise AssertionError(f"输出数量不符: ParseResult={len(parse_files)}, ChangeProposal={len(proposal_files)}")
     for path in parse_files:
         validate_parse_result(json.loads(path.read_text(encoding="utf-8")))
@@ -37,7 +37,12 @@ def main() -> None:
     assert deadline["type"] == "冲突待确认"
     assert deadline["new"] is None
     assert n06["suggested_value"]["deadline"] is None
-    print("PASS frozen edge cases: incomplete course, unchanged notice, conflicting deadline")
+    n07 = json.loads((output_dir / "NOTICE-004.change-proposal.json").read_text(encoding="utf-8"))
+    assert n07["affected_task_ids"] == ["task-notice-004-registration"]
+    deadline = next(diff for diff in n07["field_diffs"] if diff["field_name"] == "deadline")
+    assert deadline["type"] == "修改"
+    assert n07["confirmation_status"] == "待确认"
+    print("PASS edge cases: incomplete course, unchanged notice, conflicting and non-conflicting deadlines")
 
 
 if __name__ == "__main__":

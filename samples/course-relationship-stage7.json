@@ -1,0 +1,36 @@
+{
+  "contract_version": "relationship-fixture-v1",
+  "public_schema_changed": false,
+  "id_policy": {
+    "course_id": "课程实体稳定编号，周视图、资料和任务关联均引用该值，不使用数组下标或课程名称作为外键",
+    "document_id": "原始资料编号，保持 ParseResult v1 既有命名空间",
+    "asset_id": "本地资料编号，仅用于关系示例，不加入 ParseResult v1",
+    "task_id": "任务稳定编号，通知变更继续通过 affected_task_ids 引用"
+  },
+  "week_view_required_fields": [
+    "name", "teacher", "location", "weekday", "start_time", "end_time", "teaching_weeks"
+  ],
+  "courses": [
+    {
+      "course_id": "course-course-001-simple",
+      "week_view": {"name": "软件工程", "teacher": "张老师", "location": "信息楼 301", "weekday": 1, "start_time": "08:00", "end_time": "09:40", "teaching_weeks": "1-16周"},
+      "document_ids": ["doc-course-001"],
+      "asset_ids": ["asset-course-001-assessment"],
+      "task_ids": ["task-course-001-homework-01"]
+    },
+    {
+      "course_id": "course-course-002-nested",
+      "week_view": {"name": "数据库系统", "teacher": "李老师", "location": "实验楼 205", "weekday": 3, "start_time": "14:00", "end_time": "15:40", "teaching_weeks": "1-16周"},
+      "document_ids": ["doc-course-002"],
+      "asset_ids": ["asset-course-002-assessment"],
+      "task_ids": ["task-course-002-lab-01"]
+    },
+    {
+      "course_id": "course-course-003-incomplete",
+      "week_view": {"name": "计算机网络", "teacher": "王老师", "location": "信息楼 402", "weekday": 5, "start_time": "10:00", "end_time": "11:40", "teaching_weeks": "1-16周"},
+      "document_ids": ["doc-course-003"],
+      "asset_ids": ["asset-course-003-assessment"],
+      "task_ids": ["task-course-003-review-01"]
+    }
+  ]
+}

@@ -7,6 +7,7 @@ from typing import Any
 
 from src.contract_guard import validate_change_proposal, validate_parse_result
 from src.input_loader import load_text
+from src.easyocr_provider import EasyOcrProvider
 from src.notice_diff_adapter import compare_parse_results
 from src.parser_adapter import ParserAdapter
 from src.recognition import FixtureOcrProvider, JsonOcrProvider, RecognizedDocument, RecognizedLine, RecognitionProvenance
@@ -41,6 +42,13 @@ def main() -> int:
         command.add_argument("--input", required=True)
         command.add_argument("--output", required=True)
 
+    easyocr_command = commands.add_parser("parse-easyocr")
+    easyocr_command.add_argument("--request", required=True)
+    easyocr_command.add_argument("--input", required=True)
+    easyocr_command.add_argument("--output", required=True)
+    easyocr_command.add_argument("--engine-version", default="1.7.2")
+    easyocr_command.add_argument("--gpu", action="store_true")
+
     fixture = commands.add_parser("parse-fixture")
     fixture.add_argument("--request", required=True)
     fixture.add_argument("--input", required=True)
@@ -58,6 +66,9 @@ def main() -> int:
 
     if args.command == "parse-text":
         _parse(args.request, load_text(Path(args.input)), args.output)
+    elif args.command == "parse-easyocr":
+        document = EasyOcrProvider(engine_version=args.engine_version, gpu=args.gpu).recognize_file(Path(args.input))
+        _parse(args.request, document, args.output)
     elif args.command == "parse-fixture":
         provider = FixtureOcrProvider({Path(args.input).name: Path(args.ground_truth)})
         _parse(args.request, provider.recognize(Path(args.input)), args.output)

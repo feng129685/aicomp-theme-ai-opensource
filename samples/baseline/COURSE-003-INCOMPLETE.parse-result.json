@@ -1,0 +1,97 @@
+{
+  "parse_result_id": "parse-course-003",
+  "document_id": "doc-course-003",
+  "status": "需人工确认",
+  "fields": [
+    {
+      "field_id": "field-course-003-course-title",
+      "field_name": "course_title",
+      "value": "计算机网络",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "# 《计算机网络》课程考核说明（虚构样例）",
+      "location": "第1行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-003-1-weight",
+      "field_name": "weight",
+      "value": 0.3,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "- 平时表现占总评成绩的 30%；",
+      "location": "第5行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-003-2-weight",
+      "field_name": "weight",
+      "value": 0.3,
+      "value_type": "number",
+      "confidence": null,
+      "source_quote": "- 实验占总评成绩的 30%；",
+      "location": "第6行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-course-003-final-weight",
+      "field_name": "weight",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": "- 期末考试占总评成绩的一部分，具体比例另行通知。",
+      "location": "第7行",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": "期末考试权重未给出",
+      "evidence_kind": "无法确认"
+    }
+  ],
+  "course_assessment": {
+    "course_id": "course-course-003-incomplete",
+    "formula_type": "weighted_sum",
+    "items": [
+      {
+        "item_id": "item-1",
+        "name": "平时表现",
+        "weight": 0.3,
+        "children": [],
+        "evidence_field_ids": [
+          "field-course-003-1-weight"
+        ]
+      },
+      {
+        "item_id": "item-2",
+        "name": "实验",
+        "weight": 0.3,
+        "children": [],
+        "evidence_field_ids": [
+          "field-course-003-2-weight"
+        ]
+      },
+      {
+        "item_id": "item-3",
+        "name": "期末考试",
+        "weight": null,
+        "children": [],
+        "evidence_field_ids": [
+          "field-course-003-final-weight"
+        ]
+      }
+    ],
+    "calculable": false,
+    "calculation_block_reason": "期末考试权重未给出"
+  },
+  "notice": null,
+  "warnings": [],
+  "errors": []
+}

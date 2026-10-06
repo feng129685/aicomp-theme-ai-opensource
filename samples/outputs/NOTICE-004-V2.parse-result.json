@@ -1,0 +1,177 @@
+{
+  "parse_result_id": "parse-notice-004-v2",
+  "document_id": "doc-notice-004-v2",
+  "status": "成功",
+  "fields": [
+    {
+      "field_id": "field-notice-004-v2-title",
+      "field_name": "title",
+      "value": "软件创新赛项目材料提交通知",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "# 软件创新赛项目材料提交通知（修订稿，虚构样例）",
+      "location": "第1行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-audience",
+      "field_name": "audience",
+      "value": "2026级软件工程专业本科生",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向软件工程专业 2026 级本科生。报名截止时间为 2026 年 10 月 22 日 18:00，提交地点为学院事务系统。报名材料为项目说明书、成员信息表，提交方式为学院事务系统在线提交。参赛者须完成校内报名。",
+      "location": "第2行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-location",
+      "field_name": "location",
+      "value": "学院事务系统",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向软件工程专业 2026 级本科生。报名截止时间为 2026 年 10 月 22 日 18:00，提交地点为学院事务系统。报名材料为项目说明书、成员信息表，提交方式为学院事务系统在线提交。参赛者须完成校内报名。",
+      "location": "第2行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-conditions",
+      "field_name": "conditions",
+      "value": "完成校内报名",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向软件工程专业 2026 级本科生。报名截止时间为 2026 年 10 月 22 日 18:00，提交地点为学院事务系统。报名材料为项目说明书、成员信息表，提交方式为学院事务系统在线提交。参赛者须完成校内报名。",
+      "location": "第2行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-submit-method",
+      "field_name": "submit_method",
+      "value": "学院事务系统在线提交",
+      "value_type": "string",
+      "confidence": null,
+      "source_quote": "面向软件工程专业 2026 级本科生。报名截止时间为 2026 年 10 月 22 日 18:00，提交地点为学院事务系统。报名材料为项目说明书、成员信息表，提交方式为学院事务系统在线提交。参赛者须完成校内报名。",
+      "location": "第2行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-materials",
+      "field_name": "materials",
+      "value": [
+        "项目说明书",
+        "成员信息表",
+        "提交方式为学院事务系统在线提交"
+      ],
+      "value_type": "string_array",
+      "confidence": null,
+      "source_quote": "面向软件工程专业 2026 级本科生。报名截止时间为 2026 年 10 月 22 日 18:00，提交地点为学院事务系统。报名材料为项目说明书、成员信息表，提交方式为学院事务系统在线提交。参赛者须完成校内报名。",
+      "location": "第2行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-deadline",
+      "field_name": "deadline",
+      "value": "2026-10-22T18:00:00+08:00",
+      "value_type": "datetime",
+      "confidence": null,
+      "source_quote": "面向软件工程专业 2026 级本科生。报名截止时间为 2026 年 10 月 22 日 18:00，提交地点为学院事务系统。报名材料为项目说明书、成员信息表，提交方式为学院事务系统在线提交。参赛者须完成校内报名。",
+      "location": "第2行",
+      "page": null,
+      "needs_confirmation": false,
+      "conflict": null,
+      "evidence_kind": "原文"
+    },
+    {
+      "field_id": "field-notice-004-v2-team-size",
+      "field_name": "team_size",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-004-v2-defense-time",
+      "field_name": "defense_time",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    },
+    {
+      "field_id": "field-notice-004-v2-supplement",
+      "field_name": "supplement",
+      "value": null,
+      "value_type": "null",
+      "confidence": null,
+      "source_quote": null,
+      "location": "原文未提供",
+      "page": null,
+      "needs_confirmation": true,
+      "conflict": null,
+      "evidence_kind": "无法确认"
+    }
+  ],
+  "course_assessment": null,
+  "notice": {
+    "matter_id": "matter-software-innovation-004",
+    "version": "v2",
+    "based_on_version": "v1",
+    "title": "软件创新赛项目材料提交通知",
+    "audience": "2026级软件工程专业本科生",
+    "location": "学院事务系统",
+    "conditions": "完成校内报名",
+    "submit_method": "学院事务系统在线提交",
+    "materials": [
+      "项目说明书",
+      "成员信息表",
+      "提交方式为学院事务系统在线提交"
+    ],
+    "deadline": "2026-10-22T18:00:00+08:00",
+    "extensions": {
+      "team_size": null,
+      "defense_time": null,
+      "supplement": null
+    },
+    "evidence_field_ids": {
+      "title": "field-notice-004-v2-title",
+      "audience": "field-notice-004-v2-audience",
+      "location": "field-notice-004-v2-location",
+      "conditions": "field-notice-004-v2-conditions",
+      "submit_method": "field-notice-004-v2-submit-method",
+      "materials": "field-notice-004-v2-materials",
+      "deadline": "field-notice-004-v2-deadline",
+      "team_size": "field-notice-004-v2-team-size",
+      "defense_time": "field-notice-004-v2-defense-time",
+      "supplement": "field-notice-004-v2-supplement"
+    }
+  },
+  "warnings": [],
+  "errors": []
+}

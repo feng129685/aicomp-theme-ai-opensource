@@ -1,0 +1,144 @@
+{
+  "proposal_id": "proposal-notice-004-v1-to-v2",
+  "matter_id": "matter-software-innovation-004",
+  "old_document_id": "doc-notice-004-v1",
+  "new_document_id": "doc-notice-004-v2",
+  "field_diffs": [
+    {
+      "diff_id": "diff-notice-004-title",
+      "field_name": "title",
+      "type": "未变化",
+      "old": "软件创新赛项目材料提交通知",
+      "new": "软件创新赛项目材料提交通知",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-title",
+        "field-notice-004-v2-title"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-004-audience",
+      "field_name": "audience",
+      "type": "未变化",
+      "old": "2026级软件工程专业本科生",
+      "new": "2026级软件工程专业本科生",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-audience",
+        "field-notice-004-v2-audience"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-004-deadline",
+      "field_name": "deadline",
+      "type": "修改",
+      "old": "2026-10-20T18:00:00+08:00",
+      "new": "2026-10-22T18:00:00+08:00",
+      "needs_confirmation": true,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-deadline",
+        "field-notice-004-v2-deadline"
+      ],
+      "affected_task_ids": [
+        "task-notice-004-registration"
+      ]
+    },
+    {
+      "diff_id": "diff-notice-004-location",
+      "field_name": "location",
+      "type": "未变化",
+      "old": "学院事务系统",
+      "new": "学院事务系统",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-location",
+        "field-notice-004-v2-location"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-004-materials",
+      "field_name": "materials",
+      "type": "未变化",
+      "old": [
+        "项目说明书",
+        "成员信息表",
+        "提交方式为学院事务系统在线提交"
+      ],
+      "new": [
+        "项目说明书",
+        "成员信息表",
+        "提交方式为学院事务系统在线提交"
+      ],
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-materials",
+        "field-notice-004-v2-materials"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-004-conditions",
+      "field_name": "conditions",
+      "type": "未变化",
+      "old": "完成校内报名",
+      "new": "完成校内报名",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-conditions",
+        "field-notice-004-v2-conditions"
+      ],
+      "affected_task_ids": []
+    },
+    {
+      "diff_id": "diff-notice-004-submit-method",
+      "field_name": "submit_method",
+      "type": "未变化",
+      "old": "学院事务系统在线提交",
+      "new": "学院事务系统在线提交",
+      "needs_confirmation": false,
+      "reason": null,
+      "evidence_field_ids": [
+        "field-notice-004-v1-submit-method",
+        "field-notice-004-v2-submit-method"
+      ],
+      "affected_task_ids": []
+    }
+  ],
+  "affected_task_ids": [
+    "task-notice-004-registration"
+  ],
+  "old_value": {
+    "deadline": "2026-10-20T18:00:00+08:00"
+  },
+  "suggested_value": {
+    "deadline": "2026-10-22T18:00:00+08:00"
+  },
+  "evidence": [
+    "field-notice-004-v1-title",
+    "field-notice-004-v2-title",
+    "field-notice-004-v1-audience",
+    "field-notice-004-v2-audience",
+    "field-notice-004-v1-deadline",
+    "field-notice-004-v2-deadline",
+    "field-notice-004-v1-location",
+    "field-notice-004-v2-location",
+    "field-notice-004-v1-materials",
+    "field-notice-004-v2-materials",
+    "field-notice-004-v1-conditions",
+    "field-notice-004-v2-conditions",
+    "field-notice-004-v1-submit-method",
+    "field-notice-004-v2-submit-method"
+  ],
+  "confirmation_status": "待确认",
+  "confirmed_at": null,
+  "confirmed_by": null
+}

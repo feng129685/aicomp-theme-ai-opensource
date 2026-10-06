@@ -5,8 +5,11 @@
   "parse_result_samples": [
     "COURSE-001-SIMPLE", "COURSE-002-NESTED", "COURSE-003-INCOMPLETE",
     "NOTICE-002-V1", "NOTICE-002-V2", "NOTICE-003-V1", "NOTICE-003-V2",
+    "NOTICE-004-V1", "NOTICE-004-V2",
     "OCR-001-CLEAR", "NOTICE-003-REAL-OCR"
   ],
-  "change_proposal_samples": ["NOTICE-002", "NOTICE-003"],
-  "real_ocr_note": "NOTICE-003-real-ocr.json 是接入格式示例，不是实测结果"
+  "change_proposal_samples": ["NOTICE-002", "NOTICE-003", "NOTICE-004"],
+  "real_ocr_note": "easyocr-real-run.json 记录真实引擎尝试；当前 accuracy 为 null，不是准确率结果",
+  "notice_change_sample": "NOTICE-004",
+  "relationship_sample": "course-relationship-stage7.json"
 }
