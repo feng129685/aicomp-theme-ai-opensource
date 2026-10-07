@@ -1,0 +1,103 @@
+{
+  "contract_version": "sync-fixture-v1",
+  "public_schema_changed": false,
+  "account_id": "account-fixture-001",
+  "devices": ["device-a", "device-b"],
+  "courses": [
+    {
+      "course_id": "course-course-001-simple",
+      "name": "软件工程",
+      "teacher": "张老师",
+      "location": "信息楼301",
+      "weekday": 1,
+      "start_time": "08:00",
+      "end_time": "09:40",
+      "teaching_weeks": "1-16周",
+      "document_ids": ["doc-course-001"],
+      "asset_ids": ["asset-course-001-assessment"],
+      "task_ids": ["task-course-001-homework-01"]
+    },
+    {
+      "course_id": "course-course-002-nested",
+      "name": "数据库系统",
+      "teacher": "李老师",
+      "location": "实验楼205",
+      "weekday": 3,
+      "start_time": "14:00",
+      "end_time": "15:40",
+      "teaching_weeks": "1-16周",
+      "document_ids": ["doc-course-002"],
+      "asset_ids": ["asset-course-002-assessment"],
+      "task_ids": ["task-course-002-lab-01"]
+    }
+  ],
+  "documents": {
+    "doc-course-001": {
+      "document_id": "doc-course-001",
+      "asset_id": "asset-course-001-assessment",
+      "course_id": "course-course-001-simple",
+      "file_name": "COURSE-001-SIMPLE.md",
+      "raw_text": "软件工程课程考核：平时作业占40%，期末考试占60%。",
+      "parse_result_id": "parse-course-001-simple",
+      "parse_status": "成功"
+    },
+    "doc-course-002": {
+      "document_id": "doc-course-002",
+      "asset_id": "asset-course-002-assessment",
+      "course_id": "course-course-002-nested",
+      "file_name": "COURSE-002-NESTED.md",
+      "raw_text": "数据库系统课程考核：平时成绩占40%，期末考试占60%；平时成绩由作业和实验组成。",
+      "parse_result_id": "parse-course-002-nested",
+      "parse_status": "成功"
+    }
+  },
+  "assets": {
+    "asset-course-001-assessment": {
+      "asset_id": "asset-course-001-assessment",
+      "document_id": "doc-course-001",
+      "course_id": "course-course-001-simple",
+      "status": "已保存"
+    },
+    "asset-course-002-assessment": {
+      "asset_id": "asset-course-002-assessment",
+      "document_id": "doc-course-002",
+      "course_id": "course-course-002-nested",
+      "status": "已保存"
+    }
+  },
+  "tasks": {
+    "task-course-001-homework-01": {
+      "task_id": "task-course-001-homework-01",
+      "course_id": "course-course-001-simple",
+      "source_document_id": "doc-course-001",
+      "title": "提交需求分析作业",
+      "deadline": "2026-10-18T20:00:00+08:00",
+      "confirmed": true,
+      "status": "未完成",
+      "reminder_at": "2026-10-18T18:00:00+08:00"
+    },
+    "task-course-002-lab-01": {
+      "task_id": "task-course-002-lab-01",
+      "course_id": "course-course-002-nested",
+      "source_document_id": "doc-course-002",
+      "title": "完成数据库实验一",
+      "deadline": "2026-10-21T20:00:00+08:00",
+      "confirmed": true,
+      "status": "未完成",
+      "reminder_at": "2026-10-21T18:00:00+08:00"
+    }
+  },
+  "parse_evidence": {
+    "doc-course-001": {
+      "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+      "source_quotes": ["平时作业占40%", "期末考试占60%"],
+      "status": "成功"
+    },
+    "doc-course-002": {
+      "evidence_field_ids": ["field-course-002-item-usual", "field-course-002-weight-usual", "field-course-002-item-final", "field-course-002-weight-final"],
+      "source_quotes": ["平时成绩占40%", "期末考试占60%"],
+      "status": "成功"
+    }
+  },
+  "not_synced": ["grade_scenario_inputs", "grade_scenario_results"]
+}

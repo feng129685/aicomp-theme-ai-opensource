@@ -53,6 +53,13 @@ python validation/generate_stage7_samples.py
 python -m unittest tests.test_stage7_deliverables -v
 ```
 
+复现同步语义夹具：
+
+```powershell
+python -m unittest tests.test_sync_fixtures -v
+python validation/validate_sync_fixtures.py
+```
+
 ## 目录
 
 ```text
@@ -63,6 +70,12 @@ tests/        单元与集成回归测试
 validation/   可复现验收脚本
 docs/         接口、OCR 测试口径和第三方依赖说明
 ```
+
+## 同步语义夹具
+
+`samples/sync-baseline-v1.json` 和 `samples/sync-cases-v1.json` 提供稳定编号、原文证据、任务关系以及在线、离线、失败、冲突四类合成场景。它们用于约束未来同步实现的行为，不包含账号系统、服务器或网络客户端，也不扩展 `ParseResult v1` 和 `ChangeProposal v1` 的公共字段。样例中的 `account_id` 和 `device_id` 只是合成标识，用于关系测试，不提供认证或账号能力。
+
+离线和失败场景必须保留本机副本，冲突场景必须保留两边候选值并等待用户选择。字段不变量见 [docs/sync-field-invariants.md](docs/sync-field-invariants.md)，场景矩阵见 [docs/sync-scenario-matrix.md](docs/sync-scenario-matrix.md)。
 
 ## OCR 说明
 

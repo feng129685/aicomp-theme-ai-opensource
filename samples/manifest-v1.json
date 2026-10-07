@@ -11,5 +11,8 @@
   "change_proposal_samples": ["NOTICE-002", "NOTICE-003", "NOTICE-004"],
   "real_ocr_note": "easyocr-real-run.json 记录真实引擎尝试；当前 accuracy 为 null，不是准确率结果",
   "notice_change_sample": "NOTICE-004",
-  "relationship_sample": "course-relationship-stage7.json"
+  "relationship_sample": "course-relationship-stage7.json",
+  "sync_fixture_version": "sync-fixture-v1",
+  "sync_fixture_samples": ["sync-baseline-v1.json", "sync-cases-v1.json"],
+  "sync_fixture_note": "同步夹具只验证稳定编号、证据关系和离线/失败/冲突语义，不代表真实服务器同步。"
 }

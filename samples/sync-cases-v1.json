@@ -1,0 +1,125 @@
+{
+  "fixture_version": "sync-cases-v1",
+  "public_schema_changed": false,
+  "status_scope": "同步状态只用于测试夹具和实现核验，不是 ParseResult v1 或 ChangeProposal v1 的新增枚举",
+  "allowed_sync_statuses": ["已同步", "离线待同步", "同步失败", "冲突待选择"],
+  "cases": [
+    {
+      "case_id": "SYNC-001-ONLINE",
+      "scenario": "设备A在线上传，设备B首次拉取",
+      "before": {
+        "device_id": "device-a",
+        "course_id": "course-course-001-simple",
+        "document_id": "doc-course-001",
+        "asset_id": "asset-course-001-assessment",
+        "task_id": "task-course-001-homework-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+        "source_quotes": ["平时作业占40%", "期末考试占60%"]
+      },
+      "after": {
+        "device_id": "device-b",
+        "course_id": "course-course-001-simple",
+        "document_id": "doc-course-001",
+        "asset_id": "asset-course-001-assessment",
+        "task_id": "task-course-001-homework-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+        "source_quotes": ["平时作业占40%", "期末考试占60%"]
+      },
+      "expected": {"sync_status": "已同步", "local_copy_preserved": true, "retry_available": false}
+    },
+    {
+      "case_id": "SYNC-002-OFFLINE",
+      "scenario": "设备A离线修改已确认任务，恢复联网前不冒充已同步",
+      "before": {
+        "device_id": "device-a",
+        "course_id": "course-course-001-simple",
+        "document_id": "doc-course-001",
+        "asset_id": "asset-course-001-assessment",
+        "task_id": "task-course-001-homework-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+        "source_quotes": ["平时作业占40%", "期末考试占60%"]
+      },
+      "after": {
+        "device_id": "device-a",
+        "course_id": "course-course-001-simple",
+        "document_id": "doc-course-001",
+        "asset_id": "asset-course-001-assessment",
+        "task_id": "task-course-001-homework-01",
+        "parse_status": "成功",
+        "task_status": "已完成",
+        "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+        "source_quotes": ["平时作业占40%", "期末考试占60%"]
+      },
+      "expected": {"sync_status": "离线待同步", "local_copy_preserved": true, "retry_available": true, "remote_unchanged_before_reconnect": true}
+    },
+    {
+      "case_id": "SYNC-003-FAILURE",
+      "scenario": "服务端返回503，同步失败并保留本机副本",
+      "before": {
+        "device_id": "device-a",
+        "course_id": "course-course-002-nested",
+        "document_id": "doc-course-002",
+        "asset_id": "asset-course-002-assessment",
+        "task_id": "task-course-002-lab-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-002-item-usual", "field-course-002-weight-usual", "field-course-002-item-final", "field-course-002-weight-final"],
+        "source_quotes": ["平时成绩占40%", "期末考试占60%"]
+      },
+      "after": {
+        "device_id": "device-a",
+        "course_id": "course-course-002-nested",
+        "document_id": "doc-course-002",
+        "asset_id": "asset-course-002-assessment",
+        "task_id": "task-course-002-lab-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-002-item-usual", "field-course-002-weight-usual", "field-course-002-item-final", "field-course-002-weight-final"],
+        "source_quotes": ["平时成绩占40%", "期末考试占60%"]
+      },
+      "expected": {"sync_status": "同步失败", "error_code": "HTTP_503", "local_copy_preserved": true, "retry_available": true}
+    },
+    {
+      "case_id": "SYNC-004-CONFLICT",
+      "scenario": "设备A和设备B离线修改同一课程地点",
+      "before": {
+        "device_id": "device-a",
+        "course_id": "course-course-001-simple",
+        "document_id": "doc-course-001",
+        "asset_id": "asset-course-001-assessment",
+        "task_id": "task-course-001-homework-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+        "source_quotes": ["平时作业占40%", "期末考试占60%"]
+      },
+      "after": {
+        "device_id": "device-b",
+        "course_id": "course-course-001-simple",
+        "document_id": "doc-course-001",
+        "asset_id": "asset-course-001-assessment",
+        "task_id": "task-course-001-homework-01",
+        "parse_status": "成功",
+        "task_status": "未完成",
+        "evidence_field_ids": ["field-course-001-item-homework", "field-course-001-weight-homework", "field-course-001-item-final", "field-course-001-weight-final"],
+        "source_quotes": ["平时作业占40%", "期末考试占60%"]
+      },
+      "expected": {
+        "sync_status": "冲突待选择",
+        "conflict_field": "location",
+        "conflict_values": {"device-a": "信息楼301", "device-b": "实验楼205"},
+        "both_versions_preserved": true,
+        "silent_overwrite": false,
+        "resolution": "用户选择",
+        "local_copy_preserved": true,
+        "retry_available": false
+      }
+    }
+  ]
+}
